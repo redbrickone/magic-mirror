@@ -25,11 +25,11 @@ var config = {
 	timeFormat: 24,
 	units: "metric",
 	// serverOnly:  true/false/"local" ,
-			     // local for armv6l processors, default 
+			     // local for armv6l processors, default
 			     //   starts serveronly and then starts chrome browser
 			     // false, default for all  NON-armv6l devices
 			     // true, force serveronly mode, because you want to.. no UI on this device
-	
+
 	modules: [
 		{
 			module: "alert",
@@ -62,17 +62,24 @@ var config = {
 			module: "compliments",
 			position: "lower_third"
 		},
-
 		{
-			module: "currentweather",
-			position: "top_right",
+			module: 'MMM-WunderGround',
+			position: 'top_right',
 			config: {
-				locationID: "4273837",  //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				units: 'imperial',
-				timeFormat: 12,
-				showHumidity: true,
-				showFeelsLike: true,
-				appid: "6a031b69107d56e63659d0434205a957"
+				apikey: 'd0bd19018bc84fb9bd19018bc83fb9ae', // private; don't share!
+				pws: 'pws:KMOKANSA458', //culemborg
+				hourly: '1',
+				fctext: '1',
+				fcdaycount: "5",
+				fcdaystart: "0",
+				hourlyinterval: "3",
+				hourlycount: "2",
+				alerttime: 10000,
+				alerttruncatestring: "english:",
+				roundTmpDecs: 1,
+				UseCardinals: 0,
+				layout: "horizontal",
+				sysstat: 0
 			}
 		},
 		{
